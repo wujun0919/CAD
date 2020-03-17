@@ -1,0 +1,93 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION (( 'STEP AP203' ),
+    '1' );
+FILE_NAME ('18.STEP',
+    '2009-12-25T08:55:38',
+    ( '微软用户' ),
+    ( '微软中国' ),
+    'SwSTEP 2.0',
+    'SolidWorks 2008',
+    '' );
+FILE_SCHEMA (( 'CONFIG_CONTROL_DESIGN' ));
+ENDSEC;
+
+DATA;
+#1 = APPLICATION_CONTEXT ( 'configuration controlled 3d designs of mechanical parts and assemblies' ) ;
+#2 = PRODUCT ( '18', '18', '', ( #3 ) ) ;
+#3 = MECHANICAL_CONTEXT ( 'NONE', #1, 'mechanical' ) ;
+#4 = APPLICATION_PROTOCOL_DEFINITION ( 'international standard', 'config_control_design', 1994, #1 ) ;
+#5 = PRODUCT_DEFINITION_SHAPE ( 'NONE', 'NONE',  #68 ) ;
+#6 = PRODUCT_RELATED_PRODUCT_CATEGORY ( 'detail', '', ( #2 ) ) ;
+#7 = CC_DESIGN_SECURITY_CLASSIFICATION ( #28, ( #47 ) ) ;
+#8 = CC_DESIGN_APPROVAL ( #16, ( #28 ) ) ;
+#9 = APPROVAL_DATE_TIME ( #10, #16 ) ;
+#10 = DATE_AND_TIME ( #11, #12 ) ;
+#11 = CALENDAR_DATE ( 2009, 25, 12 ) ;
+#12 = LOCAL_TIME ( 16, 55, 37.00000000000000000, #13 ) ;
+#13 = COORDINATED_UNIVERSAL_TIME_OFFSET ( 8, 0, .AHEAD. ) ;
+#14 = APPROVAL_PERSON_ORGANIZATION ( #18, #16, #15 ) ;
+#15 = APPROVAL_ROLE ( '' ) ;
+#16 = APPROVAL ( #17, '未指定' ) ;
+#17 = APPROVAL_STATUS ( 'not_yet_approved' ) ;
+#18 = PERSON_AND_ORGANIZATION ( #76, #75 ) ;
+#19 = CC_DESIGN_DATE_AND_TIME_ASSIGNMENT ( #21, #20, ( #28 ) ) ;
+#20 = DATE_TIME_ROLE ( 'classification_date' ) ;
+#21 = DATE_AND_TIME ( #22, #23 ) ;
+#22 = CALENDAR_DATE ( 2009, 25, 12 ) ;
+#23 = LOCAL_TIME ( 16, 55, 37.00000000000000000, #24 ) ;
+#24 = COORDINATED_UNIVERSAL_TIME_OFFSET ( 8, 0, .AHEAD. ) ;
+#25 = CC_DESIGN_PERSON_AND_ORGANIZATION_ASSIGNMENT ( #27, #26, ( #28 ) ) ;
+#26 = PERSON_AND_ORGANIZATION_ROLE ( 'classification_officer' ) ;
+#27 = PERSON_AND_ORGANIZATION ( #76, #75 ) ;
+#28 = SECURITY_CLASSIFICATION ( '', '', #29 ) ;
+#29 = SECURITY_CLASSIFICATION_LEVEL ( 'unclassified' ) ;
+#30 = CC_DESIGN_PERSON_AND_ORGANIZATION_ASSIGNMENT ( #32, #31, ( #47 ) ) ;
+#31 = PERSON_AND_ORGANIZATION_ROLE ( 'design_supplier' ) ;
+#32 = PERSON_AND_ORGANIZATION ( #76, #75 ) ;
+#33 = CC_DESIGN_PERSON_AND_ORGANIZATION_ASSIGNMENT ( #35, #34, ( #47 ) ) ;
+#34 = PERSON_AND_ORGANIZATION_ROLE ( 'creator' ) ;
+#35 = PERSON_AND_ORGANIZATION ( #76, #75 ) ;
+#36 = CC_DESIGN_APPROVAL ( #44, ( #47 ) ) ;
+#37 = APPROVAL_DATE_TIME ( #38, #44 ) ;
+#38 = DATE_AND_TIME ( #39, #40 ) ;
+#39 = CALENDAR_DATE ( 2009, 25, 12 ) ;
+#40 = LOCAL_TIME ( 16, 55, 37.00000000000000000, #41 ) ;
+#41 = COORDINATED_UNIVERSAL_TIME_OFFSET ( 8, 0, .AHEAD. ) ;
+#42 = APPROVAL_PERSON_ORGANIZATION ( #46, #44, #43 ) ;
+#43 = APPROVAL_ROLE ( '' ) ;
+#44 = APPROVAL ( #45, '未指定' ) ;
+#45 = APPROVAL_STATUS ( 'not_yet_approved' ) ;
+#46 = PERSON_AND_ORGANIZATION ( #76, #75 ) ;
+#47 = PRODUCT_DEFINITION_FORMATION_WITH_SPECIFIED_SOURCE ( '任何', '', #2, .NOT_KNOWN. ) ;
+#48 = CC_DESIGN_DATE_AND_TIME_ASSIGNMENT ( #50, #49, ( #68 ) ) ;
+#49 = DATE_TIME_ROLE ( 'creation_date' ) ;
+#50 = DATE_AND_TIME ( #51, #52 ) ;
+#51 = CALENDAR_DATE ( 2009, 25, 12 ) ;
+#52 = LOCAL_TIME ( 16, 55, 37.00000000000000000, #53 ) ;
+#53 = COORDINATED_UNIVERSAL_TIME_OFFSET ( 8, 0, .AHEAD. ) ;
+#54 = CC_DESIGN_PERSON_AND_ORGANIZATION_ASSIGNMENT ( #56, #55, ( #68 ) ) ;
+#55 = PERSON_AND_ORGANIZATION_ROLE ( 'creator' ) ;
+#56 = PERSON_AND_ORGANIZATION ( #76, #75 ) ;
+#57 = CC_DESIGN_APPROVAL ( #65, ( #68 ) ) ;
+#58 = APPROVAL_DATE_TIME ( #59, #65 ) ;
+#59 = DATE_AND_TIME ( #60, #61 ) ;
+#60 = CALENDAR_DATE ( 2009, 25, 12 ) ;
+#61 = LOCAL_TIME ( 16, 55, 37.00000000000000000, #62 ) ;
+#62 = COORDINATED_UNIVERSAL_TIME_OFFSET ( 8, 0, .AHEAD. ) ;
+#63 = APPROVAL_PERSON_ORGANIZATION ( #67, #65, #64 ) ;
+#64 = APPROVAL_ROLE ( '' ) ;
+#65 = APPROVAL ( #66, '未指定' ) ;
+#66 = APPROVAL_STATUS ( 'not_yet_approved' ) ;
+#67 = PERSON_AND_ORGANIZATION ( #76, #75 ) ;
+#68 = PRODUCT_DEFINITION ( '未知', '', #47, #69 ) ;
+#69 = DESIGN_CONTEXT ( 'detailed design', #71, 'design' ) ;
+#70 = APPLICATION_PROTOCOL_DEFINITION ( 'international standard', 'config_control_design', 1994, #71 ) ;
+#71 = APPLICATION_CONTEXT ( 'configuration controlled 3d designs of mechanical parts and assemblies' ) ;
+#72 = CC_DESIGN_PERSON_AND_ORGANIZATION_ASSIGNMENT ( #74, #73, ( #2 ) ) ;
+#73 = PERSON_AND_ORGANIZATION_ROLE ( 'design_owner' ) ;
+#74 = PERSON_AND_ORGANIZATION ( #76, #75 ) ;
+#75 = ORGANIZATION ( '未指定', '未指定', '' ) ;
+#76 = PERSON ( '未指定', '未指定', '未指定', ('未指定'), ('未指定'), ('未指定') ) ;
+ENDSEC;
+END-ISO-10303-21;
