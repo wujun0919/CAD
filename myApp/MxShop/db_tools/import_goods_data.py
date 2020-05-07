@@ -30,6 +30,7 @@ for goods_detail in row_data:
     category = GoodsCategory.objects.filter(name=category_name)
     if category:
         goods.category = category[0]
+            
     goods.save()
 
     for goods_image in goods_detail["images"]:
