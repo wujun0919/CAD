@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, reverse
 from django.views.generic import View
 from django.http import HttpResponse
+from django.core.mail import send_mail
 import re
+import time
 from .models import User
 
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
@@ -71,18 +73,37 @@ class RegisterView(View):
         user.save()
 
         # 加密
-
+        serializer = Serializer('11111', 3600)
+        info = {"comfirm": user.id}
+        token = serializer.dumps(info)
+        token = token.decode()
+        
         # 业务处理
+        # 发送邮件
+
+        def send_register_active_email(to_email, username, token):
+            # 组织邮件信息
+            subject = '天天生鲜欢迎信息'
+            message = ''
+            sender = settings.EMAIL_FROM
+            receiver = [to_email]
+            html_message = '<h1>%s, 欢迎您成为天天生鲜注册会员</h1>请点击下面链接激活您的账户<br/><a href="http://127.0.0.1:8000/user/active/%s">http://127.0.0.1:8000/user/active/%s</a>' % (username, token, token)
+
+            send_mail(subject, message, sender, receiver, html_message=html_message)
+
+        send_register_active_email(email, username, token)
+
         return redirect(reverse('goods:index'))
 
 
 class ActiveView(View):
     def get(self, request, token):
-        serializer = Serializer(settings.SECRET_KEY, 3600)
+        serializer = Serializer('11111', 3600)
         try:
             info = serializer.loads(token)
-            user_id = info['confirm']
+            user_id = info['comfirm']
             user = User.objects.get(id=user_id)
+            print(user)
             user.is_active = 1
             user.save()
             return redirect(reverse('user:login'))
@@ -93,3 +114,11 @@ class ActiveView(View):
 class LoginView(View):
     def get(self, request):
         return render(request, 'login.html')
+
+class test(View):
+    def get(self, request, token):
+        serializer = Serializer('11111', 3600)
+        info = serializer.loads(token)
+        user_id = info['comfirm']
+        user = User.objects.get(id=user_id)
+        return HttpResponse(user)
