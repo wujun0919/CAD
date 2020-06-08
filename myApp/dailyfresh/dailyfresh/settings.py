@@ -155,3 +155,18 @@ EMAIL_HOST_USER = 'wujun0919@qq.com'
 EMAIL_HOST_PASSWORD = 'uxsljmgklshabcbb'
 # 收件人看到的发件人
 EMAIL_FROM = '天天生鲜<wujun0919@qq.com>'
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "default"
+
+LOGIN_URL = '/user/login'
