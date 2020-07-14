@@ -1,0 +1,1 @@
+cmd /k "cd /d F:\dailyfresh&&workon venvdemo&&python manage.py runserver "

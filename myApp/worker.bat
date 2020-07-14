@@ -1,0 +1,1 @@
+cmd /k "cd /d F:\dailyfresh&&workon worker&&celery -A celery_tasks.tasks worker -l info -P eventlet "

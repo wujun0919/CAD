@@ -1,0 +1,1 @@
+cmd /k "cd /d F:\Redis&&redis-server.exe"

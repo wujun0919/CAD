@@ -1,0 +1,1 @@
+cmd /k "cd /d F:\nginx-1.18.0&&start nginx"
